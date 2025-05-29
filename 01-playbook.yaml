@@ -1,3 +1,4 @@
+# list of plays
 - name: ping the server
   hosts: frontend
   tasks: # list of tasks
