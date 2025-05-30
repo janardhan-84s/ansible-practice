@@ -1,4 +1,6 @@
 # This script is tells about the shell vs command 
+# command mode is more secure than shell
+# we can register the command output into a variable by using " Register" command
 
 - name: shell vs command
   hosts: frontend
