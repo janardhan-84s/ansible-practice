@@ -1,0 +1,10 @@
+# This script is for getting gathering facts, FACTS= Variables
+# it is getting the variables information in targetting server.
+
+- name: gathering facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: print facts
+    ansible.builtin.debug: # it is used to print the statements while executing
+      msg: "{{ ansible_facts }}"
