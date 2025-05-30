@@ -1,0 +1,16 @@
+# This script is used to get the idea about loops in ansible.
+# "Item" is the reserved keyword for this loop concept
+
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: "Hello, {{ item }}" #item here is reserved keyword
+    loop:
+    - Suresh
+    - Ramesh
+    - Joseph
+    - Raheem
+    
