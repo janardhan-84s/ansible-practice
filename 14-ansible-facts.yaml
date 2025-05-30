@@ -1,0 +1,19 @@
+# This script is for using ansible facts and to get respective servers.
+# If the respective server is there in the ansible facts it is getting installed 
+
+
+- name: playbook control using ansible facts
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: install nginx if redhat
+    ansible.builtin.dnf: # This module is used to manage the packages
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
+
+  - name: install nginx if debian
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debian"

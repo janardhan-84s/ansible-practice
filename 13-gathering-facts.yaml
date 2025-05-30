@@ -8,3 +8,5 @@
   - name: print facts
     ansible.builtin.debug: # it is used to print the statements while executing
       msg: "{{ ansible_facts }}"
+
+# output : It is having so much of huge data and it is rans under background.
